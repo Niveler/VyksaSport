@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listComplex">
+
+    <fragment
+        android:id="@+id/addComplex"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.complex.AddComplex"
+        android:label="Добавить спортивный комплекс"
+        tools:layout="@layout/fragment_add_complex" >
+        <action
+            android:id="@+id/action_addComplex_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_addComplex_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/complexDetail"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.complex.ComplexDetail"
+        android:label="Подробнее о комплексе"
+        tools:layout="@layout/fragment_complex_detail" >
+        <action
+            android:id="@+id/action_complexDetail_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_complexDetail_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listComplex"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.complex.ListComplex"
+        android:label="Список спортивных комплексов"
+        tools:layout="@layout/fragment_list_complex" >
+        <action
+            android:id="@+id/action_listComplex_to_complexDetail"
+            app:destination="@id/complexDetail" />
+        <action
+            android:id="@+id/action_listComplex_to_addComplex"
+            app:destination="@id/addComplex" />
+        <action
+            android:id="@+id/action_listComplex_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listEventsFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.ListEventsFragment"
+        android:label="Список мероприятий"
+        tools:layout="@layout/fragment_list_events" >
+        <action
+            android:id="@+id/action_listEventsFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_deleteEventFragment"
+            app:destination="@id/deleteEventFragment" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_detailEventFragment"
+            app:destination="@id/detailEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.AddEventFragment"
+        android:label="Добавить мероприятие"
+        tools:layout="@layout/fragment_add_event" >
+        <action
+            android:id="@+id/action_addEventFragment_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_addEventFragment_to_listComplex"
+            app:destination="@id/listComplex" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteEventFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.DeleteEventFragment"
+        android:label="Удалить мероприятие"
+        tools:layout="@layout/fragment_delete_event" >
+        <action
+            android:id="@+id/action_deleteEventFragment_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_deleteEventFragment_to_listComplex"
+            app:destination="@id/listComplex" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailEventFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.DetailEventFragment"
+        android:label="Подробнее о мероприятии"
+        tools:layout="@layout/fragment_detail_event" >
+        <action
+            android:id="@+id/action_detailEventFragment_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_detailEventFragment_to_listComplex"
+            app:destination="@id/listComplex" />
+    </fragment>
+</navigation>

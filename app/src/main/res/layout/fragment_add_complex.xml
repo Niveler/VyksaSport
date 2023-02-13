@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.complex.AddComplex">
+
+
+    <ImageView
+        android:id="@+id/imgComplexAdd"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:contentDescription="ComplexImage"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <EditText
+        android:id="@+id/etComplexName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Название"
+        android:inputType="textCapWords"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/imgComplexAdd"
+        app:layout_constraintStart_toStartOf="@+id/imgComplexAdd"
+        app:layout_constraintTop_toBottomOf="@+id/imgComplexAdd"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btComplexOperationMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Установить время работы"
+        android:textColor="#212121"
+        app:layout_constraintEnd_toEndOf="@+id/etComplexName"
+        app:layout_constraintStart_toStartOf="@+id/etComplexName"
+        app:layout_constraintTop_toBottomOf="@+id/etComplexName"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/etComplexAdress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Адресс"
+        android:inputType="textPostalAddress|textCapWords"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/tvTime"
+        app:layout_constraintStart_toStartOf="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="с 00:00 до 00:00"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/btComplexOperationMode"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/btComplexOperationMode"
+        app:layout_constraintTop_toBottomOf="@+id/btComplexOperationMode" />
+
+    <EditText
+        android:id="@+id/etComplexNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="+71234567"
+        android:inputType="phone"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/etComplexAdress"
+        app:layout_constraintStart_toStartOf="@+id/etComplexAdress"
+        app:layout_constraintTop_toBottomOf="@+id/etComplexAdress"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="name@email.com"
+        android:inputType="textEmailAddress|textCapWords"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/etComplexNumber"
+        app:layout_constraintStart_toStartOf="@+id/etComplexNumber"
+        app:layout_constraintTop_toBottomOf="@+id/etComplexNumber"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/saveComplex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Добавить"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="InvalidId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
