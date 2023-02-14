@@ -6,13 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.APP
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.adapter.EventsAdapter
 import com.andreyolenkov.vyksasport.databinding.FragmentListEventsBinding
-import com.andreyolenkov.vyksasport.models.EventModel
+import com.andreyolenkov.vyksasport.models.EventModelTuple
 
 class ListEventsFragment : Fragment() {
     lateinit var binding: FragmentListEventsBinding
@@ -45,7 +44,10 @@ class ListEventsFragment : Fragment() {
         recyclerView=binding.rvEvents
         adapter = EventsAdapter()
         recyclerView.adapter = adapter
-        viewModel.getAllEvents().observe(viewLifecycleOwner,{listEvents->
+        /*viewModel.getAllEvents().observe(viewLifecycleOwner,{listEvents->
+            adapter.setList(listEvents.asReversed())
+        })*/
+        viewModel.getAllAventsComplName().observe(viewLifecycleOwner,{listEvents->
             adapter.setList(listEvents.asReversed())
         })
         binding.btnAddEvent.setOnClickListener {
@@ -54,7 +56,7 @@ class ListEventsFragment : Fragment() {
     }
 
     companion object {
-        fun clickEventItem(eventsModel: EventModel) {
+        fun clickEventItem(eventsModel: EventModelTuple) {
             val bundle = Bundle()
             bundle.putSerializable("event",eventsModel)
             APP.navController.navigate(R.id.action_listEventsFragment_to_detailEventFragment,bundle)

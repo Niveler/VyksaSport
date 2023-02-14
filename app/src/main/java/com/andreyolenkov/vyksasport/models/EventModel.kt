@@ -1,12 +1,19 @@
 package com.andreyolenkov.vyksasport.models
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 import java.io.Serializable
 import java.time.format.DateTimeFormatter
 
-@Entity("events")
+@Entity("events",
+    indices = [Index("id")],
+    foreignKeys = [
+        ForeignKey(
+            entity = ComplexModel::class,
+            parentColumns = ["id"],
+            childColumns = ["complexId"]
+        )
+    ]
+    )
 class EventModel (
     @PrimaryKey(autoGenerate = true)
     var id:Int=0,

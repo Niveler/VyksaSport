@@ -10,18 +10,19 @@ import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.databinding.FragmentAddEventBinding
 import com.andreyolenkov.vyksasport.databinding.FragmentDetailEventBinding
 import com.andreyolenkov.vyksasport.models.EventModel
+import com.andreyolenkov.vyksasport.models.EventModelTuple
 import kotlinx.android.synthetic.main.fragment_detail_event.*
 
 class DetailEventFragment : Fragment() {
     lateinit var binding: FragmentDetailEventBinding
-    lateinit var currentEvent: EventModel
+    lateinit var currentEvent: EventModelTuple
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetailEventBinding.inflate(layoutInflater,container,false)
-        currentEvent = arguments?.getSerializable("event") as EventModel
+        currentEvent = arguments?.getSerializable("event") as EventModelTuple
         return binding.root
     }
 

@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.R
-import com.andreyolenkov.vyksasport.models.EventModel
+import com.andreyolenkov.vyksasport.models.EventModelTuple
 import com.andreyolenkov.vyksasport.ui.screens.events.ListEventsFragment
 import kotlinx.android.synthetic.main.item_events.view.*
 
 class EventsAdapter:RecyclerView.Adapter<EventsAdapter.EventsViewHolder>() {
-    private var listEvents = emptyList<EventModel>()
+    private var listEvents = emptyList<EventModelTuple>()
     class EventsViewHolder(view:View): RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventsViewHolder {
@@ -24,6 +24,7 @@ class EventsAdapter:RecyclerView.Adapter<EventsAdapter.EventsViewHolder>() {
         holder.itemView.event_timedate.text = listEvents[position].timedate
         holder.itemView.event_place.text = listEvents[position].place
         holder.itemView.event_description.text = listEvents[position].description
+        holder.itemView.event_complex.text = listEvents[position].complexName
     }
 
     override fun getItemCount(): Int {
@@ -31,7 +32,7 @@ class EventsAdapter:RecyclerView.Adapter<EventsAdapter.EventsViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list:List<EventModel>) {
+    fun setList(list: List<EventModelTuple>) {
         listEvents = list
         notifyDataSetChanged()
     }

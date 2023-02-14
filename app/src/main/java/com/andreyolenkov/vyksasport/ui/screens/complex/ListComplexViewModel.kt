@@ -20,10 +20,4 @@ class ListComplexViewModel (application: Application):AndroidViewModel(applicati
     fun getAllComplex():LiveData<List<ComplexModel>>{
         return REPOSITORY_COMPLEX.allComplex
     }
-    /*fun getComplexByName(name: String): List<ComplexModel>  {
-        viewModelScope.launch {
-
-        }
-    }*/
-
 }

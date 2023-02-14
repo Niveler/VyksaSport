@@ -8,6 +8,7 @@ import com.andreyolenkov.vyksasport.REPOSITORY_EVENTS
 import com.andreyolenkov.vyksasport.db.ComplexDatabase
 import com.andreyolenkov.vyksasport.db.repository.EventsRealization
 import com.andreyolenkov.vyksasport.models.EventModel
+import com.andreyolenkov.vyksasport.models.EventModelTuple
 
 class ListEventsViewModel (application: Application):AndroidViewModel(application) {
     val context = application
@@ -17,5 +18,8 @@ class ListEventsViewModel (application: Application):AndroidViewModel(applicatio
     }
     fun getAllEvents():LiveData<List<EventModel>>{
         return REPOSITORY_EVENTS.allEvents
+    }
+    fun getAllAventsComplName():LiveData<List<EventModelTuple>> {
+        return REPOSITORY_EVENTS.allEventsWithComplexName
     }
 }

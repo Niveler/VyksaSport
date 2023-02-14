@@ -7,6 +7,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.andreyolenkov.vyksasport.models.ComplexModel
 import com.andreyolenkov.vyksasport.models.EventModel
+import com.andreyolenkov.vyksasport.models.EventModelTuple
 
 @Dao
 interface EventsDao {
@@ -18,4 +19,9 @@ interface EventsDao {
 
     @Query("SELECT * FROM events")
     fun getAllComplex(): LiveData<List<EventModel>>
+
+    @Query("SELECT events.id,events.name,events.place,events.timedate, " +
+            "complex.name as complex_name, events.description FROM events " +
+            "INNER JOIN complex on events.complexId = complex.id")
+    fun getAllEventsWithComplexName(): LiveData<List<EventModelTuple>>
 }
