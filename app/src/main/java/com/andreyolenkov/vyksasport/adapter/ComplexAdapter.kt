@@ -12,7 +12,7 @@ import com.andreyolenkov.vyksasport.ui.screens.complex.ListComplex
 import kotlinx.android.synthetic.main.item_complex.view.*
 
 class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
-    private  var complexImg= ComplexImg()
+    private  var complexImg= ActionsOnImg()
     private lateinit var imgByte : Bitmap
     private var listComplex = emptyList<ComplexModel>()
 
@@ -24,7 +24,7 @@ class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ComplexViewHolder, position: Int) {
-        imgByte = complexImg.getComplexImg(listComplex[position].img)//собираем картинку из набора байт
+        imgByte = complexImg.getImg(listComplex[position].img)//собираем картинку из набора байт
         holder.itemView.title_complex.text = listComplex[position].name
         holder.itemView.img_complex.setImageBitmap(imgByte) //добалвяем картинку
     }

@@ -3,12 +3,11 @@ package com.andreyolenkov.vyksasport.ui.screens.events
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import com.andreyolenkov.vyksasport.REPOSITORY_EVENTS
 import com.andreyolenkov.vyksasport.db.ComplexDatabase
 import com.andreyolenkov.vyksasport.db.repository.EventsRealization
 import com.andreyolenkov.vyksasport.models.EventModel
-import com.andreyolenkov.vyksasport.models.EventModelTuple
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 
 class ListEventsViewModel (application: Application):AndroidViewModel(application) {
     val context = application

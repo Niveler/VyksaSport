@@ -1,4 +1,4 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.data.model
+package com.andreyolenkov.vyksasport.models
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

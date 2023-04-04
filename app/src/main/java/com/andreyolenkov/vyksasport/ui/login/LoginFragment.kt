@@ -1,4 +1,4 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.ui.login
+package com.andreyolenkov.vyksasport.ui.login
 
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -11,9 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.Toast
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.databinding.FragmentLoginBinding

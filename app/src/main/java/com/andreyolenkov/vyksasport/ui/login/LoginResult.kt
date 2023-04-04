@@ -1,4 +1,4 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.ui.login
+package com.andreyolenkov.vyksasport.ui.login
 
 /**
  * Authentication result : success (user details) or error message.

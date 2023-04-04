@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_listComplex_to_listEventsFragment"
             app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_listComplex_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
     </fragment>
     <fragment
         android:id="@+id/listEventsFragment"
@@ -58,6 +61,9 @@
         <action
             android:id="@+id/action_listEventsFragment_to_detailEventFragment"
             app:destination="@id/detailEventFragment" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
     </fragment>
     <fragment
         android:id="@+id/addEventFragment"
@@ -94,5 +100,56 @@
         <action
             android:id="@+id/action_detailEventFragment_to_listComplex"
             app:destination="@id/listComplex" />
+    </fragment>
+    <fragment
+        android:id="@+id/listSectionFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.section.ListSectionFragment"
+        android:label="fragment_list_section"
+        tools:layout="@layout/fragment_list_section" >
+        <action
+            android:id="@+id/action_listSectionFragment_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_section_detail"
+            app:destination="@id/section_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/section_detail"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.section.SectionDetail"
+        android:label="fragment_section_detail"
+        tools:layout="@layout/fragment_section_detail" >
+        <action
+            android:id="@+id/action_section_detail_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_section_detail_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_section_detail_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_section_detail_to_sectionCalendar"
+            app:destination="@id/sectionCalendar" />
+    </fragment>
+    <fragment
+        android:id="@+id/sectionCalendar"
+        android:name="com.andreyolenkov.vyksasport.SectionCalendar"
+        android:label="fragment_section_calendar"
+        tools:layout="@layout/fragment_section_calendar" >
+        <action
+            android:id="@+id/action_sectionCalendar_to_section_detail"
+            app:destination="@id/section_detail" />
+        <action
+            android:id="@+id/action_sectionCalendar_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_sectionCalendar_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_sectionCalendar_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
     </fragment>
 </navigation>

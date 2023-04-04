@@ -5,9 +5,8 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.andreyolenkov.vyksasport.models.ComplexModel
 import com.andreyolenkov.vyksasport.models.EventModel
-import com.andreyolenkov.vyksasport.models.EventModelTuple
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 
 @Dao
 interface EventsDao {

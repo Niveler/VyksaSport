@@ -3,9 +3,7 @@ package com.andreyolenkov.vyksasport.db.repository
 import androidx.lifecycle.LiveData
 import com.andreyolenkov.vyksasport.db.dao.EventsDao
 import com.andreyolenkov.vyksasport.models.EventModel
-import com.andreyolenkov.vyksasport.models.EventModelTuple
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 
 class EventsRealization (private val eventsDao: EventsDao):EventsRepository{
     override val allEvents: LiveData<List<EventModel>>

@@ -12,10 +12,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.andreyolenkov.vyksasport.APP
 import com.andreyolenkov.vyksasport.R
-import com.andreyolenkov.vyksasport.adapter.ComplexImg
+import com.andreyolenkov.vyksasport.adapter.ActionsOnImg
 import com.andreyolenkov.vyksasport.databinding.FragmentAddComplexBinding
 import com.andreyolenkov.vyksasport.models.ComplexModel
-import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 
@@ -46,7 +45,7 @@ class AddComplex : Fragment() {
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(AddComplexViewModel::class.java)
-        val complexImg = ComplexImg()
+        val complexImg = ActionsOnImg()
         binding.saveComplex.setOnClickListener {
             nameComplex = binding.etComplexName.text.toString()
             val opermode = binding.tvTime.text.toString()

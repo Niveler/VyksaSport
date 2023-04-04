@@ -1,11 +1,11 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.ui.login
+package com.andreyolenkov.vyksasport.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.andreyolenkov.vyksasport.ui.screens.profile.data.LoginRepository
-import com.andreyolenkov.vyksasport.ui.screens.profile.data.Result
+import com.andreyolenkov.vyksasport.ui.screens.profile.LoginRepository
+import com.andreyolenkov.vyksasport.ui.screens.profile.Result
 
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {

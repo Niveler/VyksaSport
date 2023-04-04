@@ -1,6 +1,6 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.data
+package com.andreyolenkov.vyksasport.ui.screens.profile
 
-import com.andreyolenkov.vyksasport.ui.screens.profile.data.model.LoggedInUser
+import com.andreyolenkov.vyksasport.models.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and

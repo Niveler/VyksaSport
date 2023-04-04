@@ -1,4 +1,4 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.data
+package com.andreyolenkov.vyksasport.ui.screens.profile
 
 /**
  * A generic class that holds a value with its loading status.

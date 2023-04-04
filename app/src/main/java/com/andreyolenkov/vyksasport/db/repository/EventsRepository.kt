@@ -2,7 +2,7 @@ package com.andreyolenkov.vyksasport.db.repository
 
 import androidx.lifecycle.LiveData
 import com.andreyolenkov.vyksasport.models.EventModel
-import com.andreyolenkov.vyksasport.models.EventModelTuple
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 
 interface EventsRepository {
     val allEvents: LiveData<List<EventModel>>

@@ -1,4 +1,4 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.ui.login
+package com.andreyolenkov.vyksasport.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

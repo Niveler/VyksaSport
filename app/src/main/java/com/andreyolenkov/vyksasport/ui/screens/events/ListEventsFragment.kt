@@ -11,7 +11,7 @@ import com.andreyolenkov.vyksasport.APP
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.adapter.EventsAdapter
 import com.andreyolenkov.vyksasport.databinding.FragmentListEventsBinding
-import com.andreyolenkov.vyksasport.models.EventModelTuple
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 
 class ListEventsFragment : Fragment() {
     lateinit var binding: FragmentListEventsBinding

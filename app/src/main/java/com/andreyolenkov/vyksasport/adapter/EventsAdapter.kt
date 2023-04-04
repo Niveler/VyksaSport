@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.R
-import com.andreyolenkov.vyksasport.models.EventModelTuple
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 import com.andreyolenkov.vyksasport.ui.screens.events.ListEventsFragment
 import kotlinx.android.synthetic.main.item_events.view.*
 

@@ -1,9 +1,9 @@
-package com.andreyolenkov.vyksasport.ui.screens.profile.ui.login
+package com.andreyolenkov.vyksasport.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.andreyolenkov.vyksasport.ui.screens.profile.data.LoginDataSource
-import com.andreyolenkov.vyksasport.ui.screens.profile.data.LoginRepository
+import com.andreyolenkov.vyksasport.ui.screens.profile.LoginDataSource
+import com.andreyolenkov.vyksasport.ui.screens.profile.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

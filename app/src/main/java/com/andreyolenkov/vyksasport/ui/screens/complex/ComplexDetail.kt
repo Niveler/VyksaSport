@@ -7,15 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.andreyolenkov.vyksasport.R
-import com.andreyolenkov.vyksasport.adapter.ComplexImg
+import com.andreyolenkov.vyksasport.adapter.ActionsOnImg
 import com.andreyolenkov.vyksasport.databinding.FragmentComplexDetailBinding
 import com.andreyolenkov.vyksasport.models.ComplexModel
 import kotlinx.android.synthetic.main.fragment_complex_detail.*
 
 
 class ComplexDetail : Fragment() {
-    private  var complexImg= ComplexImg()
+    private  var complexImg= ActionsOnImg()
     private lateinit var imgByte : Bitmap
     lateinit var binding:FragmentComplexDetailBinding
     lateinit var curentComplex: ComplexModel
@@ -35,7 +34,7 @@ class ComplexDetail : Fragment() {
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(DetailComplexViewModel::class.java).apply{
-            imgByte = complexImg.getComplexImg(curentComplex.img)
+            imgByte = complexImg.getImg(curentComplex.img)
             img_complex_detail.setImageBitmap(imgByte)
             complex_name.text = curentComplex.name
             complex_operation_mode.text = curentComplex.operationMode

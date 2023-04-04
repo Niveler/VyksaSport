@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.item_events -> {
                     navController.navigate(R.id.listEventsFragment)
                 }
-                R.id.item_sections -> {}
+                R.id.item_sections -> { navController.navigate(R.id.listSectionFragment)}
                 R.id.item_profile -> {}
             }
             true

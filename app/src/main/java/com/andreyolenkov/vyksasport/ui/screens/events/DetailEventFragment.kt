@@ -6,11 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.andreyolenkov.vyksasport.R
-import com.andreyolenkov.vyksasport.databinding.FragmentAddEventBinding
 import com.andreyolenkov.vyksasport.databinding.FragmentDetailEventBinding
-import com.andreyolenkov.vyksasport.models.EventModel
-import com.andreyolenkov.vyksasport.models.EventModelTuple
+import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 import kotlinx.android.synthetic.main.fragment_detail_event.*
 
 class DetailEventFragment : Fragment() {
@@ -32,7 +29,7 @@ class DetailEventFragment : Fragment() {
     }
 
     private fun init() {
-        val viewModel = ViewModelProvider(this).get(DeleteEventViewModel::class.java).apply {
+        val viewModel = ViewModelProvider(this).get(DetailEventViewModel::class.java).apply {
             tvName.text = currentEvent.name
             tvTimeDate.text = currentEvent.timedate
             tvPlace.text = currentEvent.place
