@@ -13,7 +13,7 @@ import com.andreyolenkov.vyksasport.adapter.EventsAdapter
 import com.andreyolenkov.vyksasport.databinding.FragmentListEventsBinding
 import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 
-class ListEventsFragment : Fragment() {
+class ListEvents : Fragment() {
     lateinit var binding: FragmentListEventsBinding
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: EventsAdapter

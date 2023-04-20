@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="Мои секции" android:id="@+id/mysection"
+        android:icon="@drawable/ic_sections"></item>
+    <item android:title="Расписание занятий" android:id="@+id/mycalendar"
+        android:icon="@drawable/ic_calendar"></item>
+    <item android:title="Заявки" android:id="@+id/declaration"
+        android:icon="@drawable/ic_reaction"></item>
+    <item android:title="Сообщения" android:id="@+id/mychat"
+        android:icon="@drawable/ic_message"></item>
+</menu>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.screens.events.AddEventFragment">
+    tools:context=".ui.screens.events.AddEvents">
 
     <EditText
         android:id="@+id/etEventName"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:dropDownWidth="match_parent"
-        android:spinnerMode="dialog"
+        android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="@+id/etEventAdress"
         app:layout_constraintStart_toStartOf="@+id/etEventAdress"
         app:layout_constraintTop_toBottomOf="@+id/tvDateTime"

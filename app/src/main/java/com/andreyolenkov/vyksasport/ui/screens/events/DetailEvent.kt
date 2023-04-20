@@ -10,7 +10,7 @@ import com.andreyolenkov.vyksasport.databinding.FragmentDetailEventBinding
 import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
 import kotlinx.android.synthetic.main.fragment_detail_event.*
 
-class DetailEventFragment : Fragment() {
+class DetailEvent : Fragment() {
     lateinit var binding: FragmentDetailEventBinding
     lateinit var currentEvent: EventModelTuple
 

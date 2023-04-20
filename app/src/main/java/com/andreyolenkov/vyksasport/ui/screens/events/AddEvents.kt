@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class AddEventFragment : Fragment(){
+class AddEvents : Fragment(){
     private lateinit var binding: FragmentAddEventBinding
     private var listComplexName = ArrayList<String>()
     private var complexName = ""

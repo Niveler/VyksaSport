@@ -1,4 +1,4 @@
-package com.andreyolenkov.vyksasport.ui.screens.events
+package com.andreyolenkov.vyksasport.ui.screens.chat
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.andreyolenkov.vyksasport.R
 
-class DeleteEventFragment : Fragment() {
+class Chat : Fragment() {
 
     companion object {
-        fun newInstance() = DeleteEventFragment()
+        fun newInstance() = Chat()
     }
 
-    private lateinit var viewModel: DeleteEventViewModel
+    private lateinit var viewModel: ChatViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.fragment_delete_event, container, false)
+        return inflater.inflate(R.layout.fragment_chat, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DeleteEventViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

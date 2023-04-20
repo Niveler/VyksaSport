@@ -11,11 +11,10 @@ import com.andreyolenkov.vyksasport.APP
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.adapter.SectionsAdapter
 import com.andreyolenkov.vyksasport.databinding.FragmentListSectionBinding
-import com.andreyolenkov.vyksasport.models.SectionsModel
 import com.andreyolenkov.vyksasport.models.tuples.SectionModuleTuple
 
 
-class ListSectionFragment : Fragment() {
+class ListSections : Fragment() {
     lateinit var binding: FragmentListSectionBinding
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: SectionsAdapter

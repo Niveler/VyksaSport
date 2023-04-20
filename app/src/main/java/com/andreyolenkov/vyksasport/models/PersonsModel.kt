@@ -16,6 +16,8 @@ class PersonsModel (
     var email:String,
     @ColumnInfo
     var phone:String,
+    @ColumnInfo
+    var role: Int
     /*@ColumnInfo
     var section_id:Int
     @columnInfo

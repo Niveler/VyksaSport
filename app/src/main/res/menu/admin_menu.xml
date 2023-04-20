@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="Добавить">
+        <menu>
+            <item
+                android:id="@+id/add_complex"
+                android:icon="@drawable/ic_add"
+                android:title="Комплекс"></item>
+            <item
+                android:id="@+id/add_event"
+                android:icon="@drawable/ic_add"
+                android:title="Мероприятие"></item>
+            <item
+                android:id="@+id/add_section"
+                android:icon="@drawable/ic_add"
+                android:title="Секцию"></item>
+        </menu>
+    </item>
+   <!-- <item
+        android:title="Удалить">
+        <menu>
+            <item
+                android:id="@+id/del_complex"
+                android:icon="@drawable/ic_delete"
+                android:title="Комплекс"></item>
+            <item
+                android:id="@+id/del_event"
+                android:icon="@drawable/ic_delete"
+                android:title="Мероприятие"></item>
+            <item
+                android:id="@+id/del_section"
+                android:icon="@drawable/ic_delete"
+                android:title="Секцию"></item>
+        </menu>
+    </item>-->
+</menu>

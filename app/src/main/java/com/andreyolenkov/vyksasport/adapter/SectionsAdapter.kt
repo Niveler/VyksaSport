@@ -2,15 +2,13 @@ package com.andreyolenkov.vyksasport.adapter
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.R
-import com.andreyolenkov.vyksasport.models.SectionsModel
 import com.andreyolenkov.vyksasport.models.tuples.SectionModuleTuple
-import com.andreyolenkov.vyksasport.ui.screens.section.ListSectionFragment
+import com.andreyolenkov.vyksasport.ui.screens.section.ListSections
 import kotlinx.android.synthetic.main.item_section.view.*
 
 class SectionsAdapter:RecyclerView.Adapter<SectionsAdapter.SectionsViewHolder>() {
@@ -44,7 +42,7 @@ class SectionsAdapter:RecyclerView.Adapter<SectionsAdapter.SectionsViewHolder>()
     override fun onViewAttachedToWindow(holder: SectionsViewHolder) {
         super.onViewAttachedToWindow(holder)
         holder.itemView.setOnClickListener {
-            ListSectionFragment.clickOnItem(listSections[holder.adapterPosition])
+            ListSections.clickOnItem(listSections[holder.adapterPosition])
         }
     }
 

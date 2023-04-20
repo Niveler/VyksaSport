@@ -11,11 +11,23 @@ import com.andreyolenkov.vyksasport.models.ComplexModel
 import com.andreyolenkov.vyksasport.ui.screens.complex.ListComplex
 import kotlinx.android.synthetic.main.item_complex.view.*
 
+/**
+ * Complex adapter
+ *
+ * @constructor Create empty Complex adapter
+ */
 class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
     private  var complexImg= ActionsOnImg()
     private lateinit var imgByte : Bitmap
     private var listComplex = emptyList<ComplexModel>()
 
+    /**
+     * Complex view holder
+     *
+     * @constructor
+     *
+     * @param view
+     */
     class ComplexViewHolder (view: View) :RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComplexViewHolder {
@@ -32,7 +44,12 @@ class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
     override fun getItemCount(): Int {
         return listComplex.size
     }
-    //Отслеживает изменения в списке
+
+    /**
+     * Set list
+     *Отслеживает изменения в списке
+     * @param list
+     */
     @SuppressLint("NotifyDataSetChanged")
     fun setList(list:List<ComplexModel>){
         listComplex=list

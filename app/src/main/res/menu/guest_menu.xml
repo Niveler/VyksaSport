@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+            <item android:title="Зарегистрироваться" android:id="@+id/itm_register"
+                android:icon="@drawable/ic_register"></item>
+            <item android:title="Сообщить о проблеме" android:id="@+id/itm_report"
+                android:icon="@drawable/ic_report"></item>
+
+</menu>

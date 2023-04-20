@@ -42,10 +42,10 @@ class ListComplex : Fragment() {
         viewModel.getAllComplex().observe(viewLifecycleOwner,{listComplex->
             adapter.setList(listComplex.asReversed()) // asReversed - все новые item будут сверху
         })
-        binding.btnAddComplex.setOnClickListener{
+       /* binding.btnAddComplex.setOnClickListener{
             //Переходим по нажатию кнопки на экран добавления комплексов
             APP.navController.navigate(R.id.action_listComplex_to_addComplex)
-        }
+        }*/
     }
     companion object {
         fun clickComplexItem(complexModel: ComplexModel) {

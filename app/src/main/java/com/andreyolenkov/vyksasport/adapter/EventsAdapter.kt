@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.models.tuples.EventModelTuple
-import com.andreyolenkov.vyksasport.ui.screens.events.ListEventsFragment
+import com.andreyolenkov.vyksasport.ui.screens.events.ListEvents
 import kotlinx.android.synthetic.main.item_events.view.*
 
 class EventsAdapter:RecyclerView.Adapter<EventsAdapter.EventsViewHolder>() {
@@ -40,7 +40,7 @@ class EventsAdapter:RecyclerView.Adapter<EventsAdapter.EventsViewHolder>() {
     override fun onViewAttachedToWindow(holder: EventsViewHolder) {
         super.onViewAttachedToWindow(holder)
         holder.itemView.setOnClickListener {
-            ListEventsFragment.clickEventItem(listEvents[holder.adapterPosition])
+            ListEvents.clickEventItem(listEvents[holder.adapterPosition])
         }
     }
 

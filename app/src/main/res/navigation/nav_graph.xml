@@ -46,10 +46,31 @@
         <action
             android:id="@+id/action_listComplex_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_listComplex_to_mySections"
+            app:destination="@id/mySections" />
+        <action
+            android:id="@+id/action_listComplex_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_listComplex_to_timeTable"
+            app:destination="@id/timeTable" />
+        <action
+            android:id="@+id/action_listComplex_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_listComplex_to_addSection"
+            app:destination="@id/addSection" />
+        <action
+            android:id="@+id/action_listComplex_to_signin"
+            app:destination="@id/signin" />
+        <action
+            android:id="@+id/action_listComplex_to_register2"
+            app:destination="@id/register" />
     </fragment>
     <fragment
         android:id="@+id/listEventsFragment"
-        android:name="com.andreyolenkov.vyksasport.ui.screens.events.ListEventsFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.ListEvents"
         android:label="Список мероприятий"
         tools:layout="@layout/fragment_list_events" >
         <action
@@ -64,10 +85,25 @@
         <action
             android:id="@+id/action_listEventsFragment_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_timeTable"
+            app:destination="@id/timeTable" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_addSection"
+            app:destination="@id/addSection" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_signin"
+            app:destination="@id/signin" />
+        <action
+            android:id="@+id/action_listEventsFragment_to_register2"
+            app:destination="@id/register" />
     </fragment>
     <fragment
         android:id="@+id/addEventFragment"
-        android:name="com.andreyolenkov.vyksasport.ui.screens.events.AddEventFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.AddEvents"
         android:label="Добавить мероприятие"
         tools:layout="@layout/fragment_add_event" >
         <action
@@ -79,7 +115,7 @@
     </fragment>
     <fragment
         android:id="@+id/deleteEventFragment"
-        android:name="com.andreyolenkov.vyksasport.ui.screens.events.DeleteEventFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.DeleteEvent"
         android:label="Удалить мероприятие"
         tools:layout="@layout/fragment_delete_event" >
         <action
@@ -91,7 +127,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailEventFragment"
-        android:name="com.andreyolenkov.vyksasport.ui.screens.events.DetailEventFragment"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.events.DetailEvent"
         android:label="Подробнее о мероприятии"
         tools:layout="@layout/fragment_detail_event" >
         <action
@@ -103,9 +139,9 @@
     </fragment>
     <fragment
         android:id="@+id/listSectionFragment"
-        android:name="com.andreyolenkov.vyksasport.ui.screens.section.ListSectionFragment"
-        android:label="fragment_list_section"
-        tools:layout="@layout/fragment_list_section" >
+        android:name="com.andreyolenkov.vyksasport.ui.screens.section.ListSections"
+        android:label="Список секций"
+        tools:layout="@layout/fragment_list_section">
         <action
             android:id="@+id/action_listSectionFragment_to_listComplex"
             app:destination="@id/listComplex" />
@@ -115,12 +151,24 @@
         <action
             android:id="@+id/action_listSectionFragment_to_section_detail"
             app:destination="@id/section_detail" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_timeTable"
+            app:destination="@id/timeTable" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_addSection"
+            app:destination="@id/addSection" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_signin"
+            app:destination="@id/signin" />
     </fragment>
     <fragment
         android:id="@+id/section_detail"
         android:name="com.andreyolenkov.vyksasport.ui.screens.section.SectionDetail"
-        android:label="fragment_section_detail"
-        tools:layout="@layout/fragment_section_detail" >
+        android:label="Подробнее о секции"
+        tools:layout="@layout/fragment_section_detail">
         <action
             android:id="@+id/action_section_detail_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
@@ -133,12 +181,15 @@
         <action
             android:id="@+id/action_section_detail_to_sectionCalendar"
             app:destination="@id/sectionCalendar" />
+        <action
+            android:id="@+id/action_section_detail_to_sectionRequestAdd"
+            app:destination="@id/sectionRequestAdd" />
     </fragment>
     <fragment
         android:id="@+id/sectionCalendar"
         android:name="com.andreyolenkov.vyksasport.SectionCalendar"
-        android:label="fragment_section_calendar"
-        tools:layout="@layout/fragment_section_calendar" >
+        android:label="Расписание занятий секции"
+        tools:layout="@layout/fragment_section_calendar">
         <action
             android:id="@+id/action_sectionCalendar_to_section_detail"
             app:destination="@id/section_detail" />
@@ -151,5 +202,113 @@
         <action
             android:id="@+id/action_sectionCalendar_to_listEventsFragment"
             app:destination="@id/listEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sectionRequestAdd"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.section.SectionRequestAdd"
+        android:label="Записаться в секцию"
+        tools:layout="@layout/fragment_section_request_add">
+        <action
+            android:id="@+id/action_sectionRequestAdd_to_section_detail"
+            app:destination="@id/section_detail" />
+        <action
+            android:id="@+id/action_sectionRequestAdd_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_sectionRequestAdd_to_listComplex"
+            app:destination="@id/listComplex" />
+    </fragment>
+    <fragment
+        android:id="@+id/mySections"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.section.MySections"
+        android:label="Мои секции"
+        tools:layout="@layout/fragment_my_sections">
+        <action
+            android:id="@+id/action_mySections_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_mySections_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.chat.Chat"
+        android:label="Мой чат"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chat_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_chat_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeTable"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.calendar.TimeTable"
+        android:label="Календарь занятий"
+        tools:layout="@layout/fragment_time_table">
+        <action
+            android:id="@+id/action_timeTable_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_timeTable_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_timeTable_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.auth.register"
+        android:label="Зарегистрироваться"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_register_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_register_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_register_to_signin"
+            app:destination="@id/signin" />
+        <action
+            android:id="@+id/action_register_to_listComplex2"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_register_to_listSectionFragment2"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSection"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.section.AddSection"
+        android:label="fragment_add_section"
+        tools:layout="@layout/fragment_add_section" >
+        <action
+            android:id="@+id/action_addSection_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_addSection_to_listComplex"
+            app:destination="@id/listComplex" />
+    </fragment>
+    <fragment
+        android:id="@+id/signin"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.auth.Signin"
+        android:label="Авторизоваться"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_signin_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_signin_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_signin_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_signin_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
     </fragment>
 </navigation>

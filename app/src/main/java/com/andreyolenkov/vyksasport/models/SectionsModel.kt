@@ -30,8 +30,6 @@ class SectionsModel (
     @ColumnInfo
     var name: String="",
     @ColumnInfo
-    var imglink:String ="",
-    @ColumnInfo
     var complexId: Int = 0,
     @ColumnInfo
     var chief_id: Int = 0,

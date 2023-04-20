@@ -39,6 +39,9 @@ class SectionDetail : Fragment() {
         binding.timetable.setOnClickListener{
             APP.navController.navigate(R.id.action_section_detail_to_sectionCalendar)
         }
+        binding.addrequest.setOnClickListener {
+            APP.navController.navigate(R.id.action_section_detail_to_sectionRequestAdd)
+        }
        val viewModel = ViewModelProvider(this).get(SectionDetailViewModel::class.java).apply {
            imgByte = sectionImg.getImg(currentSection.img)
            img_section_detail.setImageBitmap(imgByte)
