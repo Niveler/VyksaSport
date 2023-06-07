@@ -8,8 +8,5 @@ class SectionModuleTuple (
     val name:String,
     val img: ByteArray,
     @ColumnInfo(name="complex_name")val complexName:String,
-    @ColumnInfo(name="chief_name")val chiefName:String,
-    @ColumnInfo(name="group_name")val groupName:String
-        ) : Serializable {
-
-}
+    @ColumnInfo(name="person_name")val personName:String
+        ) : Serializable

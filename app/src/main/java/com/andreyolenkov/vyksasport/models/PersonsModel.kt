@@ -3,9 +3,10 @@ package com.andreyolenkov.vyksasport.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity("persons")
-class PersonsModel (
+class PersonsModel(
     @PrimaryKey(autoGenerate = true)
     var id:Int=0,
     @ColumnInfo
@@ -17,9 +18,7 @@ class PersonsModel (
     @ColumnInfo
     var phone:String,
     @ColumnInfo
-    var role: Int
-    /*@ColumnInfo
-    var section_id:Int
-    @columnInfo
-    var complex_id:Int*/
-        )
+    var role: Int,
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
+    var img: ByteArray
+        ) : Serializable

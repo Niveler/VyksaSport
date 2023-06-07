@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
     <color name="background">#F18468</color>
+    <color name="background_card">#DFFAF6D6</color>
     <color name="text_for_sections">#33CCCC</color>
 </resources>

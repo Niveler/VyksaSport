@@ -17,6 +17,10 @@
                 android:id="@+id/add_section"
                 android:icon="@drawable/ic_add"
                 android:title="Секцию"></item>
+            <item
+                android:id="@+id/add_person"
+                android:icon="@drawable/ic_add"
+                android:title="Пользователь - Роль"></item>
         </menu>
     </item>
    <!-- <item

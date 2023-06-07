@@ -44,7 +44,7 @@ class Signin : Fragment() {
         val client = OkHttpClient.Builder().addInterceptor(intercepter).build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://localhost:7168/")
+            .baseUrl("https://localhost")
             .addConverterFactory(GsonConverterFactory.create()).client(client).build()
         val mainApi = retrofit.create(MainApi::class.java)
 

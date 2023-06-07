@@ -67,6 +67,9 @@
         <action
             android:id="@+id/action_listComplex_to_register2"
             app:destination="@id/register" />
+        <action
+            android:id="@+id/action_listComplex_to_addSection2"
+            app:destination="@id/addSection" />
     </fragment>
     <fragment
         android:id="@+id/listEventsFragment"
@@ -187,7 +190,7 @@
     </fragment>
     <fragment
         android:id="@+id/sectionCalendar"
-        android:name="com.andreyolenkov.vyksasport.SectionCalendar"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.calendar.SectionCalendar"
         android:label="Расписание занятий секции"
         tools:layout="@layout/fragment_section_calendar">
         <action
@@ -284,8 +287,8 @@
     <fragment
         android:id="@+id/addSection"
         android:name="com.andreyolenkov.vyksasport.ui.screens.section.AddSection"
-        android:label="fragment_add_section"
-        tools:layout="@layout/fragment_add_section" >
+        android:label="Добавить новую секцию"
+        tools:layout="@layout/fragment_add_section">
         <action
             android:id="@+id/action_addSection_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
@@ -309,6 +312,63 @@
             app:destination="@id/listEventsFragment" />
         <action
             android:id="@+id/action_signin_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPersons"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.persons.ListPersons"
+        android:label="Список пользователей"
+        tools:layout="@layout/fragment_list_persons">
+        <action
+            android:id="@+id/action_listPersons_to_addPerson"
+            app:destination="@id/addPerson" />
+        <action
+            android:id="@+id/action_listPersons_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_listPersons_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_listPersons_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_listPersons_to_personDetail"
+            app:destination="@id/personDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPerson"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.persons.AddPerson"
+        android:label="Добавить нового пользователя"
+        tools:layout="@layout/fragment_add_person">
+        <action
+            android:id="@+id/action_addPerson_to_listPersons"
+            app:destination="@id/listPersons" />
+        <action
+            android:id="@+id/action_addPerson_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_addPerson_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_addPerson_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personDetail"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.persons.PersonDetail"
+        android:label="Детальная информация"
+        tools:layout="@layout/fragment_person_detail">
+        <action
+            android:id="@+id/action_personDetail_to_listPersons"
+            app:destination="@id/listPersons" />
+        <action
+            android:id="@+id/action_personDetail_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_personDetail_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_personDetail_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
     </fragment>
 </navigation>

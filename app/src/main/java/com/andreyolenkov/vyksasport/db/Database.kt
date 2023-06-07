@@ -6,6 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.andreyolenkov.vyksasport.db.dao.ComplexDao
 import com.andreyolenkov.vyksasport.db.dao.EventsDao
+import com.andreyolenkov.vyksasport.db.dao.GroupsDao
+import com.andreyolenkov.vyksasport.db.dao.PersonsDao
 import com.andreyolenkov.vyksasport.db.dao.SectionsDao
 import com.andreyolenkov.vyksasport.models.*
 
@@ -14,14 +16,15 @@ import com.andreyolenkov.vyksasport.models.*
     EventModel::class,
     SectionsModel::class,
     CalendarModel::class,
-    ChiefsModel::class,
     GroupsModel::class,
     PersonsModel::class
                      ], version = 1)
 abstract class ComplexDatabase: RoomDatabase() {
     abstract fun getComplexDao(): ComplexDao
     abstract fun getEventsDao():EventsDao
+    abstract fun getGroupsDao():GroupsDao
     abstract fun getSectionsDao():SectionsDao
+    abstract fun getPersonsDao(): PersonsDao
 
     companion object {
         private var database:ComplexDatabase ?=null

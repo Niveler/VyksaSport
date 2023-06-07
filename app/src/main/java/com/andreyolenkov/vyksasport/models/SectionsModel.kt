@@ -13,14 +13,9 @@ import java.io.Serializable
             childColumns = ["complexId"]
         ),
     ForeignKey(
-        entity = ChiefsModel::class,
+        entity = PersonsModel::class,
         parentColumns = ["id"],
-        childColumns = ["chief_id"]
-    ),
-    ForeignKey(
-        entity = GroupsModel::class,
-        parentColumns = ["id"],
-        childColumns = ["group_id"]
+        childColumns = ["person_id"]
     )
     ]
     )
@@ -32,9 +27,7 @@ class SectionsModel (
     @ColumnInfo
     var complexId: Int = 0,
     @ColumnInfo
-    var chief_id: Int = 0,
-    @ColumnInfo
-    var group_id: Int = 0,
+    var person_id: Int = 0,
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
     var img: ByteArray
 ): Serializable

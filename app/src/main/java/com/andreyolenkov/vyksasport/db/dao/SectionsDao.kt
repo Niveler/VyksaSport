@@ -13,7 +13,7 @@ import com.andreyolenkov.vyksasport.models.tuples.SectionModuleTuple
 @Dao
 interface SectionsDao {
     @Insert
-    fun  insert(sectionsModel: SectionsModel)
+    fun  insert(sectionsModel: SectionsModel) : Long
 
     @Delete
     fun delete(sectionsModel: SectionsModel)
@@ -21,9 +21,8 @@ interface SectionsDao {
     @Query("SELECT * FROM sections")
     fun getAllSections():LiveData<List<SectionsModel>>
 
-    @Query("SELECT sections.id,sections.name,sections.img,complex.name as complex_name,  chiefs.name as chief_name, groups.group_name as group_name FROM sections " +
+    @Query("SELECT sections.id,sections.name,sections.img,complex.name as complex_name,  persons.name as person_name FROM sections " +
             "INNER JOIN complex on sections.complexId=complex.id " +
-            "INNER JOIN chiefs on sections.chief_id=chiefs.id " +
-            "INNER JOIN groups on sections.group_id=groups.id")
+            "INNER JOIN persons on sections.person_id=persons.id ")
     fun getAllSectionByName(): LiveData<List<SectionModuleTuple>>
 }

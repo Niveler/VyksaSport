@@ -53,6 +53,8 @@ class AddEvents : Fragment(){
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(AddEventViewModel::class.java)
+        val viewModel1 = ViewModelProvider(this)[ListEventsViewModel::class.java]
+        viewModel1.initdatabase()
         //Обработка нажатия на кнопку добавления мероприятия
         binding.saveEvent.setOnClickListener {
             val nameEvent = binding.etEventName.text.toString()

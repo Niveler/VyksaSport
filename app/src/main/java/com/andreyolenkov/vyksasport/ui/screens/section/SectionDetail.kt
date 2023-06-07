@@ -11,22 +11,24 @@ import com.andreyolenkov.vyksasport.APP
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.adapter.ActionsOnImg
 import com.andreyolenkov.vyksasport.databinding.FragmentSectionDetailBinding
+import com.andreyolenkov.vyksasport.models.SectionsModel
 import com.andreyolenkov.vyksasport.models.tuples.SectionModuleTuple
 import kotlinx.android.synthetic.main.fragment_section_detail.*
 
 
+
 class SectionDetail : Fragment() {
     lateinit var binding: FragmentSectionDetailBinding
-    private var sectionImg=ActionsOnImg()
-    private lateinit var imgByte:Bitmap
+    var sectionImg=ActionsOnImg()
+    lateinit var imgByte:Bitmap
     lateinit var currentSection: SectionModuleTuple
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentSectionDetailBinding.inflate(layoutInflater,container,false)
-        currentSection=arguments?.getSerializable("complex") as SectionModuleTuple
+        currentSection = arguments?.getSerializable("section") as SectionModuleTuple
         return binding.root
     }
 
@@ -42,13 +44,14 @@ class SectionDetail : Fragment() {
         binding.addrequest.setOnClickListener {
             APP.navController.navigate(R.id.action_section_detail_to_sectionRequestAdd)
         }
-       val viewModel = ViewModelProvider(this).get(SectionDetailViewModel::class.java).apply {
+        val viewModel1 = ViewModelProvider(this)[ListSectionViewModel::class.java]
+        viewModel1.initdatabase()
+        val viewModel = ViewModelProvider(this).get(SectionDetailViewModel::class.java).apply {
            imgByte = sectionImg.getImg(currentSection.img)
            img_section_detail.setImageBitmap(imgByte)
            section_name.text = currentSection.name
            complex_name.text = currentSection.complexName
-           chief_name.text = currentSection.chiefName
-           group_name.text = currentSection.groupName
-       }
+           chief_name.text = currentSection.personName
+        }
     }
 }

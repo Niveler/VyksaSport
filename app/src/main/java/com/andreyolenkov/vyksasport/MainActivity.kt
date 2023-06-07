@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     fun clickOnLogin() {
         tvLogin.setOnClickListener {
             APP.navController.navigate(R.id.signin)
-            drawer.closeDrawer(GravityCompat.START) //для закрытия NavigationView
+            binding.drawer.closeDrawer(GravityCompat.START) //для закрытия NavigationView
         }
     }
 
@@ -101,8 +101,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.mychat -> {
                     APP.navController.navigate(R.id.chat)
                 }
+                R.id.add_person -> {
+                    APP.navController.navigate(R.id.listPersons)
+                }
             }
-            drawer.closeDrawer(GravityCompat.START)
+            binding.drawer.closeDrawer(GravityCompat.START)
             true
         }
     }

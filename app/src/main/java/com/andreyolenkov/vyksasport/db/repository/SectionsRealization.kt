@@ -15,7 +15,7 @@ class SectionsRealization (private val sectionsDao: SectionsDao):SectionsReposit
     override val allSectionsByNameComplex: LiveData<List<SectionModuleTuple>>
         get() = sectionsDao.getAllSectionByName()
 
-    override suspend fun insertSection(sectionsModel: SectionsModel, onSuccess: () -> Unit) {
+    override suspend fun insertSection(sectionsModel: SectionsModel, onSuccess: () -> Unit): Long {
        return sectionsDao.insert(sectionsModel)
     }
 

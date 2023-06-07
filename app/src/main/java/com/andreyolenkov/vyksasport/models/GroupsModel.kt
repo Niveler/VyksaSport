@@ -8,9 +8,9 @@ import java.io.Serializable
     indices = [Index("id")],
     foreignKeys = [
         ForeignKey(
-            entity = ChiefsModel::class,
+            entity = PersonsModel::class,
             parentColumns = ["id"],
-            childColumns = ["chief_id"]
+            childColumns = ["person_id"]
         ),
     ForeignKey (
         entity = SectionsModel::class,
@@ -25,7 +25,7 @@ class GroupsModel (
     @ColumnInfo
     var group_name:String,
     @ColumnInfo
-    var chief_id: Int = 0,
+    var person_id: Int = 0,
     @ColumnInfo
     var section_id: Int = 0
 ): Serializable

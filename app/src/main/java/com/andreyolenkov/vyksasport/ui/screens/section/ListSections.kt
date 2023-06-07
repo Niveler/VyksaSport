@@ -49,15 +49,15 @@ class ListSections : Fragment() {
         recyclerView=binding.rvSections
         adapter = SectionsAdapter()
         recyclerView.adapter=adapter
-        viewModel.getAllSectionsWithNames().observe(viewLifecycleOwner,{listSections->
+        viewModel.getAllSectionsWithNames().observe(viewLifecycleOwner) { listSections ->
             adapter.setList(listSections)
-        })
+        }
     }
     companion object {
         fun clickOnItem(sectionModel:SectionModuleTuple) {
             val bundle = Bundle()
-            bundle.putSerializable("sections",sectionModel)
-            APP.navController.navigate(R.id.action_listSectionFragment_to_section_detail)
+            bundle.putSerializable("section",sectionModel)
+            APP.navController.navigate(R.id.action_listSectionFragment_to_section_detail,bundle)
         }
     }
 

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.R
+import com.andreyolenkov.vyksasport.databinding.ActivityMainBinding
 import com.andreyolenkov.vyksasport.models.ComplexModel
 import com.andreyolenkov.vyksasport.ui.screens.complex.ListComplex
 import kotlinx.android.synthetic.main.item_complex.view.*
@@ -20,7 +21,7 @@ class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
     private  var complexImg= ActionsOnImg()
     private lateinit var imgByte : Bitmap
     private var listComplex = emptyList<ComplexModel>()
-
+    private lateinit var binding: ActivityMainBinding
     /**
      * Complex view holder
      *
@@ -31,7 +32,7 @@ class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
     class ComplexViewHolder (view: View) :RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComplexViewHolder {
-       val view = LayoutInflater.from(parent.context).inflate(R.layout.item_complex,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_complex,parent,false)
         return ComplexViewHolder(view)
     }
 
@@ -39,6 +40,7 @@ class ComplexAdapter:RecyclerView.Adapter<ComplexAdapter.ComplexViewHolder>() {
         imgByte = complexImg.getImg(listComplex[position].img)//собираем картинку из набора байт
         holder.itemView.title_complex.text = listComplex[position].name
         holder.itemView.img_complex.setImageBitmap(imgByte) //добалвяем картинку
+
     }
 
     override fun getItemCount(): Int {

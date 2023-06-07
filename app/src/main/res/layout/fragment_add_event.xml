@@ -79,10 +79,11 @@
         android:id="@+id/spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:dropDownWidth="match_parent"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="@+id/etEventAdress"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etEventAdress"
         app:layout_constraintTop_toBottomOf="@+id/tvDateTime"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />

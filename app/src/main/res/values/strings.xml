@@ -19,4 +19,5 @@
     <string name="login_failed">"Login failed"</string>
     <string name="LogIn">Войти</string>
     <string name="Logo">Лого</string>
+    <string name="complex_title">Выберете спортивный комплекс</string>
 </resources>
