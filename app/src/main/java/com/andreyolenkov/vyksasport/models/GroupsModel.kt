@@ -27,5 +27,7 @@ class GroupsModel (
     @ColumnInfo
     var person_id: Int = 0,
     @ColumnInfo
-    var section_id: Int = 0
+    var section_id: Int = 0,
+    @ColumnInfo
+    var description:String
 ): Serializable

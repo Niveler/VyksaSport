@@ -25,4 +25,10 @@ interface SectionsDao {
             "INNER JOIN complex on sections.complexId=complex.id " +
             "INNER JOIN persons on sections.person_id=persons.id ")
     fun getAllSectionByName(): LiveData<List<SectionModuleTuple>>
+
+    @Query("SELECT sections.id,sections.name,sections.img,complex.name as complex_name,  persons.name as person_name FROM sections " +
+            "INNER JOIN complex on sections.complexId=complex.id "  +
+            "INNER JOIN persons on sections.person_id=persons.id " +
+            "WHERE sections.person_id = :idPerson")
+    fun getMySections(idPerson:Long) : LiveData<List<SectionModuleTuple>>
 }

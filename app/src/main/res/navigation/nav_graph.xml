@@ -70,6 +70,15 @@
         <action
             android:id="@+id/action_listComplex_to_addSection2"
             app:destination="@id/addSection" />
+        <action
+            android:id="@+id/action_listComplex_to_addPersonGroup"
+            app:destination="@id/addPersonGroup" />
+        <action
+            android:id="@+id/action_listComplex_to_listWriSection"
+            app:destination="@id/listWriSection" />
+        <action
+            android:id="@+id/action_listComplex_to_addWritSection"
+            app:destination="@id/addWritSection" />
     </fragment>
     <fragment
         android:id="@+id/listEventsFragment"
@@ -166,6 +175,9 @@
         <action
             android:id="@+id/action_listSectionFragment_to_signin"
             app:destination="@id/signin" />
+        <action
+            android:id="@+id/action_listSectionFragment_to_listWriSection"
+            app:destination="@id/listWriSection" />
     </fragment>
     <fragment
         android:id="@+id/section_detail"
@@ -187,6 +199,9 @@
         <action
             android:id="@+id/action_section_detail_to_sectionRequestAdd"
             app:destination="@id/sectionRequestAdd" />
+        <action
+            android:id="@+id/action_section_detail_to_addWritSection"
+            app:destination="@id/addWritSection" />
     </fragment>
     <fragment
         android:id="@+id/sectionCalendar"
@@ -232,6 +247,9 @@
         <action
             android:id="@+id/action_mySections_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_mySections_to_timeTable"
+            app:destination="@id/timeTable" />
     </fragment>
     <fragment
         android:id="@+id/chat"
@@ -259,6 +277,9 @@
         <action
             android:id="@+id/action_timeTable_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_timeTable_to_mySections"
+            app:destination="@id/mySections" />
     </fragment>
     <fragment
         android:id="@+id/register"
@@ -370,5 +391,98 @@
         <action
             android:id="@+id/action_personDetail_to_listSectionFragment"
             app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listGroups"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.groups.ListGroups"
+        android:label="fragment_list_groups"
+        tools:layout="@layout/fragment_list_groups" >
+        <action
+            android:id="@+id/action_listGroups_to_addGroup"
+            app:destination="@id/addGroup" />
+        <action
+            android:id="@+id/action_listGroups_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_listGroups_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+        <action
+            android:id="@+id/action_listGroups_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroup"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.groups.AddGroup"
+        android:label="fragment_add_group"
+        tools:layout="@layout/fragment_add_group" >
+        <action
+            android:id="@+id/action_addGroup_to_listGroups"
+            app:destination="@id/listGroups" />
+        <action
+            android:id="@+id/action_addGroup_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_addGroup_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPersonGroup"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.groups.AddPersonGroup"
+        android:label="fragment_add_person_group"
+        tools:layout="@layout/fragment_add_person_group" >
+        <action
+            android:id="@+id/action_addPersonGroup_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_addPersonGroup_to_listPersons"
+            app:destination="@id/listPersons" />
+        <action
+            android:id="@+id/action_addPersonGroup_to_wriSectionDetail"
+            app:destination="@id/wriSectionDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWritSection"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.writesection.AddWritSection"
+        android:label="fragment_add_writ_section"
+        tools:layout="@layout/fragment_add_writ_section" >
+        <action
+            android:id="@+id/action_addWritSection_to_listWriSection"
+            app:destination="@id/listWriSection" />
+        <action
+            android:id="@+id/action_addWritSection_to_listComplex"
+            app:destination="@id/listComplex" />
+    </fragment>
+    <fragment
+        android:id="@+id/listWriSection"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.writesection.ListWriSection"
+        android:label="fragment_list_wri_section"
+        tools:layout="@layout/fragment_list_wri_section" >
+        <action
+            android:id="@+id/action_listWriSection_to_listComplex"
+            app:destination="@id/listComplex" />
+        <action
+            android:id="@+id/action_listWriSection_to_listSectionFragment"
+            app:destination="@id/listSectionFragment" />
+        <action
+            android:id="@+id/action_listWriSection_to_addWritSection"
+            app:destination="@id/addWritSection" />
+        <action
+            android:id="@+id/action_listWriSection_to_wriSectionDetail"
+            app:destination="@id/wriSectionDetail" />
+        <action
+            android:id="@+id/action_listWriSection_to_listEventsFragment"
+            app:destination="@id/listEventsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wriSectionDetail"
+        android:name="com.andreyolenkov.vyksasport.ui.screens.writesection.WriSectionDetail"
+        android:label="fragment_wri_section_detail"
+        tools:layout="@layout/fragment_wri_section_detail" >
+        <action
+            android:id="@+id/action_wriSectionDetail_to_listWriSection"
+            app:destination="@id/listWriSection" />
+        <action
+            android:id="@+id/action_wriSectionDetail_to_addPersonGroup"
+            app:destination="@id/addPersonGroup" />
     </fragment>
 </navigation>

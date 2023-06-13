@@ -8,15 +8,15 @@ import androidx.room.*
         ForeignKey(
             entity = SectionsModel::class,
             parentColumns = ["id"],
-            childColumns = ["section_id"]
+            childColumns = ["group_id"]
         )
     ]
-    )
+)
 class CalendarModel (
     @PrimaryKey(autoGenerate = true)
     var id:Int=0,
     @ColumnInfo
-    var section_id: Int = 0,
+    var group_id: Int = 0,
     @ColumnInfo
     var timedate: String = "",
     @ColumnInfo

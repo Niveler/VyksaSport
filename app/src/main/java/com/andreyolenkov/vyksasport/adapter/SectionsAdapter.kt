@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andreyolenkov.vyksasport.R
 import com.andreyolenkov.vyksasport.models.tuples.SectionModuleTuple
 import com.andreyolenkov.vyksasport.ui.screens.section.ListSections
+import com.andreyolenkov.vyksasport.ui.screens.section.MySections
 import kotlinx.android.synthetic.main.item_section.view.*
 
 class SectionsAdapter:RecyclerView.Adapter<SectionsAdapter.SectionsViewHolder>() {
@@ -43,6 +44,7 @@ class SectionsAdapter:RecyclerView.Adapter<SectionsAdapter.SectionsViewHolder>()
         super.onViewAttachedToWindow(holder)
         holder.itemView.setOnClickListener {
             ListSections.clickOnItem(listSections[holder.adapterPosition])
+            MySections.clickOnItem(listSections[holder.adapterPosition])
         }
     }
 

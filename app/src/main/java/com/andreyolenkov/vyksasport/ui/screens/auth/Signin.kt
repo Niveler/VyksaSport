@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.andreyolenkov.vyksasport.APP
 import com.andreyolenkov.vyksasport.R
+import com.andreyolenkov.vyksasport.REPOSITORY_PERSONS
 import com.andreyolenkov.vyksasport.databinding.FragmentSigninBinding
 import com.andreyolenkov.vyksasport.retrofit.AuthRequest
 import com.andreyolenkov.vyksasport.retrofit.MainApi
@@ -49,7 +50,7 @@ class Signin : Fragment() {
         val mainApi = retrofit.create(MainApi::class.java)
 
         binding.btSingin.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
+            /*CoroutineScope(Dispatchers.IO).launch {
                 val user = mainApi.auth(
                     AuthRequest(
                         binding.enterLogin.text.toString(),
@@ -61,6 +62,14 @@ class Signin : Fragment() {
                 } else {
                     Toast.makeText(context,"Bad request",Toast.LENGTH_LONG).show()
                 }
+            }*/
+            //ЗАГРУШКА
+            if (binding.enterLogin.text.toString()=="admin" && binding.enterPass.text.toString()=="admin") {
+                val person = REPOSITORY_PERSONS.allUsers
+            } else if (binding.enterLogin.text.toString()=="trainer" && binding.enterPass.text.toString()=="trainer") {
+
+            } else if (binding.enterLogin.text.toString()=="user" && binding.enterPass.text.toString()=="user") {
+
             }
         }
     }

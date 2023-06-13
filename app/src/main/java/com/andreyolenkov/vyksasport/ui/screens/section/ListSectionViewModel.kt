@@ -24,5 +24,7 @@ class ListSectionViewModel(application: Application): AndroidViewModel(applicati
     fun getAllSectionsWithNames():LiveData<List<SectionModuleTuple>> {
         return REPOSITORY_SECTIONS.allSectionsByNameComplex
     }
-
+    fun getAllMySections():LiveData<List<SectionModuleTuple>> {
+        return REPOSITORY_SECTIONS.allMySections
+    }
 }

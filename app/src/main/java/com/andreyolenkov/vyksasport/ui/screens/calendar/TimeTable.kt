@@ -1,32 +1,46 @@
 package com.andreyolenkov.vyksasport.ui.screens.calendar
 
-import androidx.lifecycle.ViewModelProvider
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.andreyolenkov.vyksasport.R
+import android.widget.CalendarView
+import androidx.lifecycle.ViewModelProvider
+import com.andreyolenkov.vyksasport.databinding.FragmentTimeTableBinding
+import com.andreyolenkov.vyksasport.models.SectionsModel
+import com.andreyolenkov.vyksasport.models.tuples.SectionModuleTuple
 
 class TimeTable : Fragment() {
-
-    companion object {
-        fun newInstance() = TimeTable()
-    }
-
-    private lateinit var viewModel: TimeTableViewModel
+    lateinit var binding: FragmentTimeTableBinding
+    lateinit var calendar:CalendarView
+    lateinit var currentSection: SectionsModel
+    private var tmpSectionId=0L
+    private var tmpPersonId=0L
+    private var tmpGroupId=0L
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.fragment_time_table, container, false)
+        binding = FragmentTimeTableBinding.inflate(layoutInflater,container,false)
+        currentSection = arguments?.getSerializable("mysections") as SectionsModel
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(TimeTableViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+    }
+
+    private fun init() {
+        calendar = binding.calendarView
+        //Получим Id текущей выбранной секции и Id пользователя
+        tmpSectionId=currentSection.id.toLong()
+        tmpPersonId=currentSection.person_id.toLong()
+        val viewModelTimeTable = ViewModelProvider(this)[TimeTableViewModel::class.java]
+
     }
 
 }
